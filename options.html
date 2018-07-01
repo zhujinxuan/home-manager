@@ -1,5 +1,252 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Appendix A. Configuration Options</title><link rel="stylesheet" type="text/css" href="style.css" /><link rel="stylesheet" type="text/css" href="overrides.css" /><link rel="stylesheet" type="text/css" href="highlightjs/mono-blue.css" /><script src="./highlightjs/highlight.pack.js" type="text/javascript"></script><script src="./highlightjs/loader.js" type="text/javascript"></script><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><link rel="home" href="index.html" title="Home Manager Manual" /><link rel="up" href="index.html" title="Home Manager Manual" /><link rel="prev" href="index.html" title="Home Manager Manual" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Appendix A. Configuration Options</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="index.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> </td></tr></table><hr /></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="ch-options"></a>Appendix A. Configuration Options</h1></div></div></div><div class="variablelist"><a id="configuration-variable-list"></a><dl class="variablelist"><dt><span class="term"><a id="opt-fonts.fontconfig.enableProfileFonts"></a><a class="term" href="options.html#opt-fonts.fontconfig.enableProfileFonts"><code class="option">fonts.fontconfig.enableProfileFonts</code></a></span></dt><dd><p>Configure fontconfig to discover fonts installed through
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"><html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Appendix A. Configuration Options</title><link rel="stylesheet" type="text/css" href="style.css" /><link rel="stylesheet" type="text/css" href="overrides.css" /><link rel="stylesheet" type="text/css" href="highlightjs/mono-blue.css" /><script src="./highlightjs/highlight.pack.js" type="text/javascript"></script><script src="./highlightjs/loader.js" type="text/javascript"></script><meta name="generator" content="DocBook XSL Stylesheets V1.79.1" /><link rel="home" href="index.html" title="Home Manager Manual" /><link rel="up" href="index.html" title="Home Manager Manual" /><link rel="prev" href="index.html" title="Home Manager Manual" /></head><body><div class="navheader"><table width="100%" summary="Navigation header"><tr><th colspan="3" align="center">Appendix A. Configuration Options</th></tr><tr><td width="20%" align="left"><a accesskey="p" href="index.html">Prev</a> </td><th width="60%" align="center"> </th><td width="20%" align="right"> </td></tr></table><hr /></div><div class="appendix"><div class="titlepage"><div><div><h1 class="title"><a id="ch-options"></a>Appendix A. Configuration Options</h1></div></div></div><div class="variablelist"><a id="configuration-variable-list"></a><dl class="variablelist"><dt><span class="term"><a id="opt-accounts.email.accounts"></a><a class="term" href="options.html#opt-accounts.email.accounts"><code class="option">accounts.email.accounts</code></a></span></dt><dd><p>List of email accounts.</p><p><span class="emphasis"><em>Type:</em></span> attribute set of submodules</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    
+    }
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/notmuch.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/notmuch.nix&gt;
+            </a></code></td></tr><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/mbsync.nix&gt;
+            </a></code></td></tr><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.address"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.address"><code class="option">accounts.email.accounts.&lt;name&gt;.address</code></a></span></dt><dd><p>The email address of this account.</p><p><span class="emphasis"><em>Type:</em></span> string matching the pattern .*@.*</p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "jane.doe@example.org"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.flavor"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.flavor"><code class="option">accounts.email.accounts.&lt;name&gt;.flavor</code></a></span></dt><dd><p>Some email providers have peculiar behavior that require
+special treatment. This option is therefore intended to
+indicate the nature of the provider.
+</p><p>
+When this indicates a specific provider then, for example,
+the IMAP and SMTP server configuration may be set
+automatically.
+</p><p><span class="emphasis"><em>Type:</em></span> one of "plain", "runbox.com"</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "plain"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.folders"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.folders"><code class="option">accounts.email.accounts.&lt;name&gt;.folders</code></a></span></dt><dd><p>Standard email folders.
+</p><p><span class="emphasis"><em>Type:</em></span> submodule</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    
+    }
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.folders.drafts"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.folders.drafts"><code class="option">accounts.email.accounts.&lt;name&gt;.folders.drafts</code></a></span></dt><dd><p>Relative path of the drafts mail folder.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "Drafts"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.folders.inbox"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.folders.inbox"><code class="option">accounts.email.accounts.&lt;name&gt;.folders.inbox</code></a></span></dt><dd><p>Relative path of the inbox mail.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "Inbox"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.folders.sent"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.folders.sent"><code class="option">accounts.email.accounts.&lt;name&gt;.folders.sent</code></a></span></dt><dd><p>Relative path of the sent mail folder.
+</p><p><span class="emphasis"><em>Type:</em></span> null or string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "Sent"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.folders.trash"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.folders.trash"><code class="option">accounts.email.accounts.&lt;name&gt;.folders.trash</code></a></span></dt><dd><p>Relative path of the deleted mail folder.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "Trash"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.imap"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.imap"><code class="option">accounts.email.accounts.&lt;name&gt;.imap</code></a></span></dt><dd><p>The IMAP configuration to use for this account.
+</p><p><span class="emphasis"><em>Type:</em></span> null or submodule</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.imap.host"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.imap.host"><code class="option">accounts.email.accounts.&lt;name&gt;.imap.host</code></a></span></dt><dd><p>Hostname of IMAP server.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "imap.example.org"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.imap.port"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.imap.port"><code class="option">accounts.email.accounts.&lt;name&gt;.imap.port</code></a></span></dt><dd><p>The port on which the IMAP server listens. If
+<code class="literal">null</code> then the default port is used.
+</p><p><span class="emphasis"><em>Type:</em></span> null or positive integer, meaning &gt;0</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        993
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.imap.tls"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.imap.tls"><code class="option">accounts.email.accounts.&lt;name&gt;.imap.tls</code></a></span></dt><dd><p>Configuration for secure connections.
+</p><p><span class="emphasis"><em>Type:</em></span> submodule</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    
+    }
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.imap.tls.enable"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.imap.tls.enable"><code class="option">accounts.email.accounts.&lt;name&gt;.imap.tls.enable</code></a></span></dt><dd><p>Whether to enable TLS/SSL.
+</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.imap.tls.certificatesFile"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.imap.tls.certificatesFile"><code class="option">accounts.email.accounts.&lt;name&gt;.imap.tls.certificatesFile</code></a></span></dt><dd><p>Path to file containing certificate authorities that should
+be used to validate the connection authenticity. If
+<code class="literal">null</code> then the system default is used.
+Note, if set then the system default may still be accepted.
+</p><p><span class="emphasis"><em>Type:</em></span> null or path</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.imap.tls.useStartTls"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.imap.tls.useStartTls"><code class="option">accounts.email.accounts.&lt;name&gt;.imap.tls.useStartTls</code></a></span></dt><dd><p>Whether to use STARTTLS.
+</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.maildir"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.maildir"><code class="option">accounts.email.accounts.&lt;name&gt;.maildir</code></a></span></dt><dd><p>Maildir configuration for this account.
+</p><p><span class="emphasis"><em>Type:</em></span> null or submodule</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    path = "\${name}"; 
+    }
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.maildir.path"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.maildir.path"><code class="option">accounts.email.accounts.&lt;name&gt;.maildir.path</code></a></span></dt><dd><p>Path to maildir directory where mail for this account is
+stored. This is relative to the base maildir path.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.mbsync.enable"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.mbsync.enable"><code class="option">accounts.email.accounts.&lt;name&gt;.mbsync.enable</code></a></span></dt><dd><p>Whether to enable synchronization using mbsync.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/mbsync.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.mbsync.create"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.mbsync.create"><code class="option">accounts.email.accounts.&lt;name&gt;.mbsync.create</code></a></span></dt><dd><p>Automatically create missing mailboxes within the
+given mail store.
+</p><p><span class="emphasis"><em>Type:</em></span> one of "none", "maildir", "imap", "both"</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "none"
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "maildir"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/mbsync.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.mbsync.expunge"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.mbsync.expunge"><code class="option">accounts.email.accounts.&lt;name&gt;.mbsync.expunge</code></a></span></dt><dd><p>Permanently remove messages marked for deletion from
+the given mail store.
+</p><p><span class="emphasis"><em>Type:</em></span> one of "none", "maildir", "imap", "both"</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "none"
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "both"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/mbsync.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.mbsync.flatten"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.mbsync.flatten"><code class="option">accounts.email.accounts.&lt;name&gt;.mbsync.flatten</code></a></span></dt><dd><p>If set, flattens the hierarchy within the maildir by
+substituting the canonical hierarchy delimiter
+<code class="literal">/</code> with this value.
+</p><p><span class="emphasis"><em>Type:</em></span> null or string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "."
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/mbsync.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.mbsync.patterns"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.mbsync.patterns"><code class="option">accounts.email.accounts.&lt;name&gt;.mbsync.patterns</code></a></span></dt><dd><p>Pattern of mailboxes to synchronize.
+</p><p><span class="emphasis"><em>Type:</em></span> list of strings</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    [
+    "*" 
+    ]
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/mbsync.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.mbsync.remove"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.mbsync.remove"><code class="option">accounts.email.accounts.&lt;name&gt;.mbsync.remove</code></a></span></dt><dd><p>Propagate mailbox deletions to the given mail store.
+</p><p><span class="emphasis"><em>Type:</em></span> one of "none", "maildir", "imap", "both"</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "none"
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "imap"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/mbsync.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.name"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.name"><code class="option">accounts.email.accounts.&lt;name&gt;.name</code></a></span></dt><dd><p>Unique identifier of the account. This is set to the
+attribute name of the account configuration.
+</p><p><span class="emphasis"><em>Type:</em></span> string <span class="emphasis"><em>(read only)</em></span></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.notmuch.enable"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.notmuch.enable"><code class="option">accounts.email.accounts.&lt;name&gt;.notmuch.enable</code></a></span></dt><dd><p>Whether to enable notmuch indexing.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/notmuch.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/notmuch.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.passwordCommand"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.passwordCommand"><code class="option">accounts.email.accounts.&lt;name&gt;.passwordCommand</code></a></span></dt><dd><p>A command, which when run writes the account password on
+standard output.
+</p><p><span class="emphasis"><em>Type:</em></span> null or string or list of strings</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "secret-tool lookup email me@example.org"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.primary"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.primary"><code class="option">accounts.email.accounts.&lt;name&gt;.primary</code></a></span></dt><dd><p>Whether this is the primary account. Only one account may be
+set as primary.
+</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.realName"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.realName"><code class="option">accounts.email.accounts.&lt;name&gt;.realName</code></a></span></dt><dd><p>Name displayed when sending mails.</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "Jane Doe"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.smtp"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.smtp"><code class="option">accounts.email.accounts.&lt;name&gt;.smtp</code></a></span></dt><dd><p>The SMTP configuration to use for this account.
+</p><p><span class="emphasis"><em>Type:</em></span> null or submodule</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.smtp.host"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.smtp.host"><code class="option">accounts.email.accounts.&lt;name&gt;.smtp.host</code></a></span></dt><dd><p>Hostname of SMTP server.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "smtp.example.org"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.smtp.port"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.smtp.port"><code class="option">accounts.email.accounts.&lt;name&gt;.smtp.port</code></a></span></dt><dd><p>The port on which the SMTP server listens. If
+<code class="literal">null</code> then the default port is used.
+</p><p><span class="emphasis"><em>Type:</em></span> null or positive integer, meaning &gt;0</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        465
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.smtp.tls"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.smtp.tls"><code class="option">accounts.email.accounts.&lt;name&gt;.smtp.tls</code></a></span></dt><dd><p>Configuration for secure connections.
+</p><p><span class="emphasis"><em>Type:</em></span> submodule</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    
+    }
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.smtp.tls.enable"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.smtp.tls.enable"><code class="option">accounts.email.accounts.&lt;name&gt;.smtp.tls.enable</code></a></span></dt><dd><p>Whether to enable TLS/SSL.
+</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.smtp.tls.certificatesFile"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.smtp.tls.certificatesFile"><code class="option">accounts.email.accounts.&lt;name&gt;.smtp.tls.certificatesFile</code></a></span></dt><dd><p>Path to file containing certificate authorities that should
+be used to validate the connection authenticity. If
+<code class="literal">null</code> then the system default is used.
+Note, if set then the system default may still be accepted.
+</p><p><span class="emphasis"><em>Type:</em></span> null or path</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.smtp.tls.useStartTls"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.smtp.tls.useStartTls"><code class="option">accounts.email.accounts.&lt;name&gt;.smtp.tls.useStartTls</code></a></span></dt><dd><p>Whether to use STARTTLS.
+</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.userName"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.userName"><code class="option">accounts.email.accounts.&lt;name&gt;.userName</code></a></span></dt><dd><p>The server username of this account. This will be used as
+the SMTP and IMAP user name.
+</p><p><span class="emphasis"><em>Type:</em></span> null or string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.maildirBasePath"></a><a class="term" href="options.html#opt-accounts.email.maildirBasePath"><code class="option">accounts.email.maildirBasePath</code></a></span></dt><dd><p>The base directory for account maildir directories. May be a
+relative path, in which case it is relative the home
+directory.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "\$HOME/Maildir"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-fonts.fontconfig.enableProfileFonts"></a><a class="term" href="options.html#opt-fonts.fontconfig.enableProfileFonts"><code class="option">fonts.fontconfig.enableProfileFonts</code></a></span></dt><dd><p>Configure fontconfig to discover fonts installed through
 <code class="varname">home.packages</code> and
 <span class="command"><strong>nix-env</strong></span>.
 </p><p>
@@ -1287,6 +1534,36 @@ command. This also includes "man" outputs of all
         true
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/man.nix#blob-path" target="_top">
               &lt;home-manager/modules/programs/man.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.mbsync.enable"></a><a class="term" href="options.html#opt-programs.mbsync.enable"><code class="option">programs.mbsync.enable</code></a></span></dt><dd><p>Whether to enable mbsync IMAP4 and Maildir mailbox synchronizer.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/mbsync.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.mbsync.package"></a><a class="term" href="options.html#opt-programs.mbsync.package"><code class="option">programs.mbsync.package</code></a></span></dt><dd><p>The package to use for the mbsync binary.</p><p><span class="emphasis"><em>Type:</em></span> package</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "pkgs.isync"
+      </code></p><p><span class="emphasis"><em>Example:</em></span> </p><pre class="programlisting">pkgs.isync</pre><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/mbsync.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.mbsync.extraConfig"></a><a class="term" href="options.html#opt-programs.mbsync.extraConfig"><code class="option">programs.mbsync.extraConfig</code></a></span></dt><dd><p>Extra configuration lines to add to the mbsync configuration.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        ""
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/mbsync.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.mbsync.groups"></a><a class="term" href="options.html#opt-programs.mbsync.groups"><code class="option">programs.mbsync.groups</code></a></span></dt><dd><p>Definition of groups.
+</p><p><span class="emphasis"><em>Type:</em></span> attribute set of attribute set of list of stringsss</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    
+    }
+  
+      </code></p><p><span class="emphasis"><em>Example:</em></span> </p><pre class="programlisting">{
+  inboxes = {
+    account1 = [ "Inbox" ];
+    account2 = [ "Inbox" ];
+  };
+}
+</pre><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/mbsync.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.mercurial.enable"></a><a class="term" href="options.html#opt-programs.mercurial.enable"><code class="option">programs.mercurial.enable</code></a></span></dt><dd><p>Whether to enable Mercurial.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         false
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
@@ -1470,6 +1747,83 @@ use Python 3 plugins.
   
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/newsboat.nix#blob-path" target="_top">
               &lt;home-manager/modules/programs/newsboat.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.notmuch.enable"></a><a class="term" href="options.html#opt-programs.notmuch.enable"><code class="option">programs.notmuch.enable</code></a></span></dt><dd><p>Whether to enable Notmuch mail indexer.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/notmuch.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/notmuch.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.notmuch.extraConfig"></a><a class="term" href="options.html#opt-programs.notmuch.extraConfig"><code class="option">programs.notmuch.extraConfig</code></a></span></dt><dd><p>Options that should be appended to the notmuch configuration file.
+</p><p><span class="emphasis"><em>Type:</em></span> attribute set of attribute set of stringss</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    maildir = 
+    {
+    synchronize_flags = "True"; 
+    }
+  ; 
+    }
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/notmuch.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/notmuch.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.notmuch.hooks.postInsert"></a><a class="term" href="options.html#opt-programs.notmuch.hooks.postInsert"><code class="option">programs.notmuch.hooks.postInsert</code></a></span></dt><dd><p>Bash statements run after a message has been inserted
+into the database and initial tags have been applied.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        ""
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/notmuch.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/notmuch.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.notmuch.hooks.postNew"></a><a class="term" href="options.html#opt-programs.notmuch.hooks.postNew"><code class="option">programs.notmuch.hooks.postNew</code></a></span></dt><dd><p>Bash statements run after new messages have been imported
+into the database and initial tags have been applied.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        ""
+      </code></p><p><span class="emphasis"><em>Example:</em></span> </p><pre class="programlisting">''
+notmuch tag +nixos -- tag:new and from:nixos1@discoursemail.com
+''</pre><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/notmuch.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/notmuch.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.notmuch.hooks.preNew"></a><a class="term" href="options.html#opt-programs.notmuch.hooks.preNew"><code class="option">programs.notmuch.hooks.preNew</code></a></span></dt><dd><p>Bash statements run before scanning or importing new
+messages into the database.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        ""
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "mbsync --all"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/notmuch.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/notmuch.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.notmuch.new"></a><a class="term" href="options.html#opt-programs.notmuch.new"><code class="option">programs.notmuch.new</code></a></span></dt><dd><p>Options related to email processing performed by
+<span class="command"><strong>notmuch new</strong></span>.
+</p><p><span class="emphasis"><em>Type:</em></span> submodule</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    
+    }
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/notmuch.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/notmuch.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.notmuch.new.ignore"></a><a class="term" href="options.html#opt-programs.notmuch.new.ignore"><code class="option">programs.notmuch.new.ignore</code></a></span></dt><dd><p>A list to specify files and directories that will not be
+searched for messages by <span class="command"><strong>notmuch new</strong></span>.
+</p><p><span class="emphasis"><em>Type:</em></span> list of strings</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    [
+    
+    ]
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/notmuch.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/notmuch.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.notmuch.new.tags"></a><a class="term" href="options.html#opt-programs.notmuch.new.tags"><code class="option">programs.notmuch.new.tags</code></a></span></dt><dd><p>A list of tags that will be added to all messages
+incorporated by <span class="command"><strong>notmuch new</strong></span>.
+</p><p><span class="emphasis"><em>Type:</em></span> list of strings</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    [
+    "unread" "inbox" 
+    ]
+  
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        
+    [
+    "new" 
+    ]
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/notmuch.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/notmuch.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.pidgin.enable"></a><a class="term" href="options.html#opt-programs.pidgin.enable"><code class="option">programs.pidgin.enable</code></a></span></dt><dd><p>Whether to enable Pidgin messaging client.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         false
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
@@ -2686,6 +3040,22 @@ attacks. When disabled, this option passes
         true
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/gpg-agent.nix#blob-path" target="_top">
               &lt;home-manager/modules/services/gpg-agent.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.gpg-agent.maxCacheTtl"></a><a class="term" href="options.html#opt-services.gpg-agent.maxCacheTtl"><code class="option">services.gpg-agent.maxCacheTtl</code></a></span></dt><dd><p>Set the maximum time a cache entry is valid to n seconds. After this
+time a cache entry will be expired even if it has been accessed
+recently or has been set using gpg-preset-passphrase. The default is
+2 hours (7200 seconds).
+</p><p><span class="emphasis"><em>Type:</em></span> null or signed integer</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/gpg-agent.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/gpg-agent.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.gpg-agent.maxCacheTtlSsh"></a><a class="term" href="options.html#opt-services.gpg-agent.maxCacheTtlSsh"><code class="option">services.gpg-agent.maxCacheTtlSsh</code></a></span></dt><dd><p>Set the maximum time a cache entry used for SSH keys is valid to n
+seconds. After this time a cache entry will be expired even if it has
+been accessed recently or has been set using gpg-preset-passphrase.
+The default is 2 hours (7200 seconds).
+</p><p><span class="emphasis"><em>Type:</em></span> null or signed integer</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/gpg-agent.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/gpg-agent.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.gpg-agent.verbose"></a><a class="term" href="options.html#opt-services.gpg-agent.verbose"><code class="option">services.gpg-agent.verbose</code></a></span></dt><dd><p>Whether to produce verbose output.
 </p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         false
@@ -3112,6 +3482,16 @@ The options are
         true
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/xscreensaver.nix#blob-path" target="_top">
               &lt;home-manager/modules/services/xscreensaver.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-systemd.user.paths"></a><a class="term" href="options.html#opt-systemd.user.paths"><code class="option">systemd.user.paths</code></a></span></dt><dd><p>Definition of systemd per-user path units. Attributes are
+merged recursively.
+</p><p><span class="emphasis"><em>Type:</em></span> attribute set</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    
+    }
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/systemd.nix#blob-path" target="_top">
+              &lt;home-manager/modules/systemd.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-systemd.user.services"></a><a class="term" href="options.html#opt-systemd.user.services"><code class="option">systemd.user.services</code></a></span></dt><dd><p>Definition of systemd per-user service units. Attributes are
 merged recursively.
 </p><p><span class="emphasis"><em>Type:</em></span> attribute set</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
