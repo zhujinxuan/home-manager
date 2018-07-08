@@ -3735,6 +3735,32 @@ custom sizes.
         ""
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/xsession.nix#blob-path" target="_top">
               &lt;home-manager/modules/xsession.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-xsession.windowManager.awesome.enable"></a><a class="term" href="options.html#opt-xsession.windowManager.awesome.enable"><code class="option">xsession.windowManager.awesome.enable</code></a></span></dt><dd><p>Whether to enable Awesome window manager..</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/window-managers/awesome.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/window-managers/awesome.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-xsession.windowManager.awesome.package"></a><a class="term" href="options.html#opt-xsession.windowManager.awesome.package"><code class="option">xsession.windowManager.awesome.package</code></a></span></dt><dd><p>Package to use for running the Awesome WM.</p><p><span class="emphasis"><em>Type:</em></span> package</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "pkgs.awesome"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/window-managers/awesome.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/window-managers/awesome.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-xsession.windowManager.awesome.luaModules"></a><a class="term" href="options.html#opt-xsession.windowManager.awesome.luaModules"><code class="option">xsession.windowManager.awesome.luaModules</code></a></span></dt><dd><p>List of lua packages available for being
+used in the Awesome configuration.
+</p><p><span class="emphasis"><em>Type:</em></span> list of packages</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    [
+    
+    ]
+  
+      </code></p><p><span class="emphasis"><em>Example:</em></span> </p><pre class="programlisting">[ luaPackages.oocairo ]</pre><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/window-managers/awesome.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/window-managers/awesome.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-xsession.windowManager.awesome.noArgb"></a><a class="term" href="options.html#opt-xsession.windowManager.awesome.noArgb"><code class="option">xsession.windowManager.awesome.noArgb</code></a></span></dt><dd><p>Disable client transparency support, which can be greatly
+detrimental to performance in some setups
+</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/window-managers/awesome.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/window-managers/awesome.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-xsession.windowManager.command"></a><a class="term" href="options.html#opt-xsession.windowManager.command"><code class="option">xsession.windowManager.command</code></a></span></dt><dd><p>Window manager start command.
 </p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Example:</em></span> </p><pre class="programlisting">let
   xmonad = pkgs.xmonad-with-packages.override {
