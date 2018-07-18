@@ -3155,6 +3155,56 @@ useful for creating the directories mbsync is going to use.
         true
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/mbsync.nix#blob-path" target="_top">
               &lt;home-manager/modules/services/mbsync.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.mpd.enable"></a><a class="term" href="options.html#opt-services.mpd.enable"><code class="option">services.mpd.enable</code></a></span></dt><dd><p>Whether to enable MPD, the music player daemon.
+</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/mpd.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/mpd.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.mpd.dataDir"></a><a class="term" href="options.html#opt-services.mpd.dataDir"><code class="option">services.mpd.dataDir</code></a></span></dt><dd><p>The directory where MPD stores its state, tag cache,
+playlists etc.
+</p><p><span class="emphasis"><em>Type:</em></span> path</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "\$XDG_DATA_HOME/mpd"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/mpd.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/mpd.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.mpd.dbFile"></a><a class="term" href="options.html#opt-services.mpd.dbFile"><code class="option">services.mpd.dbFile</code></a></span></dt><dd><p>The path to MPD's database. If set to
+<code class="literal">null</code> the parameter is omitted from the
+configuration.
+</p><p><span class="emphasis"><em>Type:</em></span> null or string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "\${dataDir}/tag_cache"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/mpd.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/mpd.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.mpd.extraConfig"></a><a class="term" href="options.html#opt-services.mpd.extraConfig"><code class="option">services.mpd.extraConfig</code></a></span></dt><dd><p>Extra directives added to to the end of MPD's configuration
+file, <code class="filename">mpd.conf</code>. Basic configuration
+like file location and uid/gid is added automatically to the
+beginning of the file. For available options see
+<span class="citerefentry"><span class="refentrytitle">mpd.conf</span>(5)</span>.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        ""
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/mpd.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/mpd.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.mpd.musicDirectory"></a><a class="term" href="options.html#opt-services.mpd.musicDirectory"><code class="option">services.mpd.musicDirectory</code></a></span></dt><dd><p>The directory where mpd reads music from.
+</p><p><span class="emphasis"><em>Type:</em></span> path</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "\$HOME/music"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/mpd.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/mpd.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.mpd.network.listenAddress"></a><a class="term" href="options.html#opt-services.mpd.network.listenAddress"><code class="option">services.mpd.network.listenAddress</code></a></span></dt><dd><p>The address for the daemon to listen on.
+Use <code class="literal">any</code> to listen on all addresses.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "127.0.0.1"
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "any"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/mpd.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/mpd.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.mpd.network.port"></a><a class="term" href="options.html#opt-services.mpd.network.port"><code class="option">services.mpd.network.port</code></a></span></dt><dd><p>The TCP port on which the the daemon will listen.
+</p><p><span class="emphasis"><em>Type:</em></span> positive integer, meaning &gt;0</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        6600
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/mpd.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/mpd.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.mpd.playlistDirectory"></a><a class="term" href="options.html#opt-services.mpd.playlistDirectory"><code class="option">services.mpd.playlistDirectory</code></a></span></dt><dd><p>The directory where mpd stores playlists.
+</p><p><span class="emphasis"><em>Type:</em></span> path</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "\${dataDir}/playlists"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/mpd.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/mpd.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.network-manager-applet.enable"></a><a class="term" href="options.html#opt-services.network-manager-applet.enable"><code class="option">services.network-manager-applet.enable</code></a></span></dt><dd><p>Whether to enable the Network Manager applet.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         false
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
@@ -3297,13 +3347,27 @@ between <code class="literal">0.1</code> and <code class="literal">1.0</code>.
   
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/redshift.nix#blob-path" target="_top">
               &lt;home-manager/modules/services/redshift.nix&gt;
-            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.redshift.latitude"></a><a class="term" href="options.html#opt-services.redshift.latitude"><code class="option">services.redshift.latitude</code></a></span></dt><dd><p>Your current latitude, between
-<code class="literal">-90.0</code> and <code class="literal">90.0</code>.
-</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/redshift.nix#blob-path" target="_top">
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.redshift.latitude"></a><a class="term" href="options.html#opt-services.redshift.latitude"><code class="option">services.redshift.latitude</code></a></span></dt><dd><p>Your current latitude, between <code class="literal">-90.0</code> and
+<code class="literal">90.0</code>. Must be provided along with
+longitude.
+</p><p><span class="emphasis"><em>Type:</em></span> null or string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/redshift.nix#blob-path" target="_top">
               &lt;home-manager/modules/services/redshift.nix&gt;
-            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.redshift.longitude"></a><a class="term" href="options.html#opt-services.redshift.longitude"><code class="option">services.redshift.longitude</code></a></span></dt><dd><p>Your current longitude, between
-between <code class="literal">-180.0</code> and <code class="literal">180.0</code>.
-</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/redshift.nix#blob-path" target="_top">
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.redshift.longitude"></a><a class="term" href="options.html#opt-services.redshift.longitude"><code class="option">services.redshift.longitude</code></a></span></dt><dd><p>Your current longitude, between <code class="literal">-180.0</code> and
+<code class="literal">180.0</code>. Must be provided along with
+latitude.
+</p><p><span class="emphasis"><em>Type:</em></span> null or string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/redshift.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/redshift.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.redshift.provider"></a><a class="term" href="options.html#opt-services.redshift.provider"><code class="option">services.redshift.provider</code></a></span></dt><dd><p>The location provider to use for determining your location. If set to
+<code class="literal">manual</code> you must also provide latitude/longitude.
+If set to <code class="literal">geoclue2</code>, you must also enable the global
+geoclue2 service.
+</p><p><span class="emphasis"><em>Type:</em></span> one of "manual", "geoclue2"</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "manual"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/redshift.nix#blob-path" target="_top">
               &lt;home-manager/modules/services/redshift.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.redshift.temperature.day"></a><a class="term" href="options.html#opt-services.redshift.temperature.day"><code class="option">services.redshift.temperature.day</code></a></span></dt><dd><p>Colour temperature to use during the day, between
 <code class="literal">1000</code> and <code class="literal">25000</code> K.
