@@ -3744,6 +3744,10 @@ If this and all other xresources options are
 </pre><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/xresources.nix#blob-path" target="_top">
               &lt;home-manager/modules/xresources.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-xresources.properties"></a><a class="term" href="options.html#opt-xresources.properties"><code class="option">xresources.properties</code></a></span></dt><dd><p>X server resources that should be set.
+Booleans are formatted as "true" or "false" respectively.
+List elements are recursively formatted as a string and joined by commas.
+All other values are directly formatted using builtins.toString. 
+Note, that 2-dimensional lists are not supported and specifying one will throw an exception.
 If this and all other xresources options are
 <code class="code">null</code>, then this feature is disabled and no
 <code class="filename">~/.Xresources</code> link is produced.
@@ -3752,7 +3756,11 @@ If this and all other xresources options are
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
         
     {
-    Emacs*toolBar = 0; XTerm*faceName = "dejavu sans mono"; 
+    Emacs*toolBar = 0; XTerm*charClass = 
+    [
+    "37:48" "45-47:48" "58:48" "64:48" "126:48" 
+    ]
+  ; XTerm*faceName = "dejavu sans mono"; 
     }
   
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/xresources.nix#blob-path" target="_top">
@@ -3795,6 +3803,15 @@ custom sizes.
         64
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/xcursor.nix#blob-path" target="_top">
               &lt;home-manager/modules/xcursor.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-xsession.preferStatusNotifierItems"></a><a class="term" href="options.html#opt-xsession.preferStatusNotifierItems"><code class="option">xsession.preferStatusNotifierItems</code></a></span></dt><dd><p>Whether tray applets should prefer using the Status Notifier
+Items (SNI) protocol, commonly called App Indicators. Note,
+not all tray applets or status bars support SNI.
+</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/xsession.nix#blob-path" target="_top">
+              &lt;home-manager/modules/xsession.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-xsession.profileExtra"></a><a class="term" href="options.html#opt-xsession.profileExtra"><code class="option">xsession.profileExtra</code></a></span></dt><dd><p>Extra shell commands to run before session start.</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         ""
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/xsession.nix#blob-path" target="_top">
