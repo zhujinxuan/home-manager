@@ -998,6 +998,22 @@ default this file will be provided by your channel
         "/nix/var/nix/profiles/per-user/root/channels/nixos/programs.sqlite"
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/command-not-found/command-not-found.nix#blob-path" target="_top">
               &lt;home-manager/modules/programs/command-not-found/command-not-found.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.direnv.enable"></a><a class="term" href="options.html#opt-programs.direnv.enable"><code class="option">programs.direnv.enable</code></a></span></dt><dd><p>Whether to enable direnv, the environment switcher.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/direnv.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/direnv.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.direnv.enableBashIntegration"></a><a class="term" href="options.html#opt-programs.direnv.enableBashIntegration"><code class="option">programs.direnv.enableBashIntegration</code></a></span></dt><dd><p>Whether to enable Bash integration.
+</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/direnv.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/direnv.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.direnv.enableZshIntegration"></a><a class="term" href="options.html#opt-programs.direnv.enableZshIntegration"><code class="option">programs.direnv.enableZshIntegration</code></a></span></dt><dd><p>Whether to enable Zsh integration.
+</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/direnv.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/direnv.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.eclipse.enable"></a><a class="term" href="options.html#opt-programs.eclipse.enable"><code class="option">programs.eclipse.enable</code></a></span></dt><dd><p>Whether to enable Eclipse.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         false
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
@@ -3466,6 +3482,16 @@ sticky true
 background "#cccccc"
 ''</pre><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/stalonetray.nix#blob-path" target="_top">
               &lt;home-manager/modules/services/stalonetray.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.status-notifier-watcher.enable"></a><a class="term" href="options.html#opt-services.status-notifier-watcher.enable"><code class="option">services.status-notifier-watcher.enable</code></a></span></dt><dd><p>Whether to enable Status Notifier Watcher.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/status-notifier-watcher.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/status-notifier-watcher.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.status-notifier-watcher.package"></a><a class="term" href="options.html#opt-services.status-notifier-watcher.package"><code class="option">services.status-notifier-watcher.package</code></a></span></dt><dd><p>The package to use for the status notifier watcher binary.</p><p><span class="emphasis"><em>Type:</em></span> package</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "pkgs.haskellPackages.status-notifier-item"
+      </code></p><p><span class="emphasis"><em>Example:</em></span> </p><pre class="programlisting">pkgs.haskellPackages.status-notifier-item</pre><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/status-notifier-watcher.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/status-notifier-watcher.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.syncthing.enable"></a><a class="term" href="options.html#opt-services.syncthing.enable"><code class="option">services.syncthing.enable</code></a></span></dt><dd><p>Whether to enable Syncthing continuous file synchronization.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         false
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
