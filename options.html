@@ -5,11 +5,7 @@
     
     }
   
-      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/notmuch.nix#blob-path" target="_top">
-              &lt;home-manager/modules/programs/notmuch.nix&gt;
-            </a></code></td></tr><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
-              &lt;home-manager/modules/programs/mbsync.nix&gt;
-            </a></code></td></tr><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
               &lt;home-manager/modules/accounts/email.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.address"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.address"><code class="option">accounts.email.accounts.&lt;name&gt;.address</code></a></span></dt><dd><p>The email address of this account.</p><p><span class="emphasis"><em>Type:</em></span> string matching the pattern .*@.*</p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
         "jane.doe@example.org"
@@ -22,7 +18,7 @@ indicate the nature of the provider.
 When this indicates a specific provider then, for example,
 the IMAP and SMTP server configuration may be set
 automatically.
-</p><p><span class="emphasis"><em>Type:</em></span> one of "plain", "runbox.com"</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+</p><p><span class="emphasis"><em>Type:</em></span> one of "plain", "gmail.com", "runbox.com"</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         "plain"
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
               &lt;home-manager/modules/accounts/email.nix&gt;
@@ -91,8 +87,8 @@ automatically.
 be used to validate the connection authenticity. If
 <code class="literal">null</code> then the system default is used.
 Note, if set then the system default may still be accepted.
-</p><p><span class="emphasis"><em>Type:</em></span> null or path</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
-        null
+</p><p><span class="emphasis"><em>Type:</em></span> path</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "config.accounts.email.certificatesFile"
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
               &lt;home-manager/modules/accounts/email.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.imap.tls.useStartTls"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.imap.tls.useStartTls"><code class="option">accounts.email.accounts.&lt;name&gt;.imap.tls.useStartTls</code></a></span></dt><dd><p>Whether to use STARTTLS.
@@ -117,24 +113,24 @@ stored. This is relative to the base maildir path.
         false
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
         true
-      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
-              &lt;home-manager/modules/programs/mbsync.nix&gt;
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.mbsync.create"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.mbsync.create"><code class="option">accounts.email.accounts.&lt;name&gt;.mbsync.create</code></a></span></dt><dd><p>Automatically create missing mailboxes within the
 given mail store.
 </p><p><span class="emphasis"><em>Type:</em></span> one of "none", "maildir", "imap", "both"</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         "none"
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
         "maildir"
-      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
-              &lt;home-manager/modules/programs/mbsync.nix&gt;
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.mbsync.expunge"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.mbsync.expunge"><code class="option">accounts.email.accounts.&lt;name&gt;.mbsync.expunge</code></a></span></dt><dd><p>Permanently remove messages marked for deletion from
 the given mail store.
 </p><p><span class="emphasis"><em>Type:</em></span> one of "none", "maildir", "imap", "both"</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         "none"
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
         "both"
-      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
-              &lt;home-manager/modules/programs/mbsync.nix&gt;
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.mbsync.flatten"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.mbsync.flatten"><code class="option">accounts.email.accounts.&lt;name&gt;.mbsync.flatten</code></a></span></dt><dd><p>If set, flattens the hierarchy within the maildir by
 substituting the canonical hierarchy delimiter
 <code class="literal">/</code> with this value.
@@ -142,8 +138,8 @@ substituting the canonical hierarchy delimiter
         null
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
         "."
-      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
-              &lt;home-manager/modules/programs/mbsync.nix&gt;
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.mbsync.patterns"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.mbsync.patterns"><code class="option">accounts.email.accounts.&lt;name&gt;.mbsync.patterns</code></a></span></dt><dd><p>Pattern of mailboxes to synchronize.
 </p><p><span class="emphasis"><em>Type:</em></span> list of strings</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         
@@ -151,15 +147,15 @@ substituting the canonical hierarchy delimiter
     "*" 
     ]
   
-      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
-              &lt;home-manager/modules/programs/mbsync.nix&gt;
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.mbsync.remove"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.mbsync.remove"><code class="option">accounts.email.accounts.&lt;name&gt;.mbsync.remove</code></a></span></dt><dd><p>Propagate mailbox deletions to the given mail store.
 </p><p><span class="emphasis"><em>Type:</em></span> one of "none", "maildir", "imap", "both"</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         "none"
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
         "imap"
-      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mbsync.nix#blob-path" target="_top">
-              &lt;home-manager/modules/programs/mbsync.nix&gt;
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.name"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.name"><code class="option">accounts.email.accounts.&lt;name&gt;.name</code></a></span></dt><dd><p>Unique identifier of the account. This is set to the
 attribute name of the account configuration.
 </p><p><span class="emphasis"><em>Type:</em></span> string <span class="emphasis"><em>(read only)</em></span></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
@@ -168,8 +164,8 @@ attribute name of the account configuration.
         false
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
         true
-      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/notmuch.nix#blob-path" target="_top">
-              &lt;home-manager/modules/programs/notmuch.nix&gt;
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.passwordCommand"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.passwordCommand"><code class="option">accounts.email.accounts.&lt;name&gt;.passwordCommand</code></a></span></dt><dd><p>A command, which when run writes the account password on
 standard output.
 </p><p><span class="emphasis"><em>Type:</em></span> null or string or list of strings</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
@@ -224,8 +220,8 @@ set as primary.
 be used to validate the connection authenticity. If
 <code class="literal">null</code> then the system default is used.
 Note, if set then the system default may still be accepted.
-</p><p><span class="emphasis"><em>Type:</em></span> null or path</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
-        null
+</p><p><span class="emphasis"><em>Type:</em></span> path</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "config.accounts.email.certificatesFile"
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
               &lt;home-manager/modules/accounts/email.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.smtp.tls.useStartTls"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.smtp.tls.useStartTls"><code class="option">accounts.email.accounts.&lt;name&gt;.smtp.tls.useStartTls</code></a></span></dt><dd><p>Whether to use STARTTLS.
@@ -237,6 +233,13 @@ Note, if set then the system default may still be accepted.
 the SMTP and IMAP user name.
 </p><p><span class="emphasis"><em>Type:</em></span> null or string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         null
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.certificatesFile"></a><a class="term" href="options.html#opt-accounts.email.certificatesFile"><code class="option">accounts.email.certificatesFile</code></a></span></dt><dd><p>Path to default file containing certificate authorities that
+should be used to validate the connection authenticity. This
+path may be overridden on a per-account basis.
+</p><p><span class="emphasis"><em>Type:</em></span> path</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "/etc/ssl/certs/ca-certificates.crt"
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
               &lt;home-manager/modules/accounts/email.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.maildirBasePath"></a><a class="term" href="options.html#opt-accounts.email.maildirBasePath"><code class="option">accounts.email.maildirBasePath</code></a></span></dt><dd><p>The base directory for account maildir directories. May be a
