@@ -156,6 +156,21 @@ substituting the canonical hierarchy delimiter
         "imap"
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
               &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.msmtp.enable"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.msmtp.enable"><code class="option">accounts.email.accounts.&lt;name&gt;.msmtp.enable</code></a></span></dt><dd><p>Whether to enable msmtp.
+</p><p>
+If enabled then it is possible to use the
+<code class="option">--account</code> command line option to send a
+message for a given account using the <span class="command"><strong>msmtp</strong></span>
+or <span class="command"><strong>msmtpq</strong></span> tool. For example,
+<span class="command"><strong>msmtp --account=private</strong></span>
+would send using the account defined in
+<code class="option">accounts.email.accounts.private</code>. If the
+<code class="option">--account</code> option is not given then the
+primary account will be used.
+</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.name"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.name"><code class="option">accounts.email.accounts.&lt;name&gt;.name</code></a></span></dt><dd><p>Unique identifier of the account. This is set to the
 attribute name of the account configuration.
 </p><p><span class="emphasis"><em>Type:</em></span> string <span class="emphasis"><em>(read only)</em></span></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
@@ -988,6 +1003,33 @@ this option) to command strings or directly to build outputs.
   
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/browserpass.nix#blob-path" target="_top">
               &lt;home-manager/modules/programs/browserpass.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.chromium.enable"></a><a class="term" href="options.html#opt-programs.chromium.enable"><code class="option">programs.chromium.enable</code></a></span></dt><dd><p>Whether to enable Chromium.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/chromium.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/chromium.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.chromium.package"></a><a class="term" href="options.html#opt-programs.chromium.package"><code class="option">programs.chromium.package</code></a></span></dt><dd><p>The Chromium package to use.</p><p><span class="emphasis"><em>Type:</em></span> package</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        "pkgs.chromium"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/chromium.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/chromium.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.chromium.extensions"></a><a class="term" href="options.html#opt-programs.chromium.extensions"><code class="option">programs.chromium.extensions</code></a></span></dt><dd><p>List of Chromium extensions to install.
+To find the extension ID, check its URL on the
+<a class="link" href="https://chrome.google.com/webstore/category/extensions" target="_top">Chrome Web Store</a>.
+</p><p><span class="emphasis"><em>Type:</em></span> list of strings</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    [
+    
+    ]
+  
+      </code></p><p><span class="emphasis"><em>Example:</em></span> </p><pre class="programlisting">[
+  "chlffgpmiacpedhhbkiomidkjlcfhogd" # pushbullet
+  "mbniclmhobmnbdlbpiphghaielnnpgdp" # lightshot
+  "gcbommkclmclpchllfjekcdonpmejbdp" # https everywhere
+  "cjpalhdlnbpafiamejdnhcphjbkeiagm" # ublock origin
+]
+</pre><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/chromium.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/chromium.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.command-not-found.enable"></a><a class="term" href="options.html#opt-programs.command-not-found.enable"><code class="option">programs.command-not-found.enable</code></a></span></dt><dd><p>Whether to enable command-not-found hook for interactive shell.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         false
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
@@ -1008,6 +1050,11 @@ default this file will be provided by your channel
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/direnv.nix#blob-path" target="_top">
               &lt;home-manager/modules/programs/direnv.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.direnv.enableBashIntegration"></a><a class="term" href="options.html#opt-programs.direnv.enableBashIntegration"><code class="option">programs.direnv.enableBashIntegration</code></a></span></dt><dd><p>Whether to enable Bash integration.
+</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/direnv.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/direnv.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.direnv.enableFishIntegration"></a><a class="term" href="options.html#opt-programs.direnv.enableFishIntegration"><code class="option">programs.direnv.enableFishIntegration</code></a></span></dt><dd><p>Whether to enable Fish integration.
 </p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         true
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/direnv.nix#blob-path" target="_top">
@@ -1167,6 +1214,14 @@ for an option format description.
         true
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/fzf.nix#blob-path" target="_top">
               &lt;home-manager/modules/programs/fzf.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.fzf.changeDirWidgetCommand"></a><a class="term" href="options.html#opt-programs.fzf.changeDirWidgetCommand"><code class="option">programs.fzf.changeDirWidgetCommand</code></a></span></dt><dd><p>The command that gets executed as the source for fzf for the
+ALT-C keybinding.
+</p><p><span class="emphasis"><em>Type:</em></span> null or string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "fd --type d"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/fzf.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/fzf.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.fzf.changeDirWidgetOptions"></a><a class="term" href="options.html#opt-programs.fzf.changeDirWidgetOptions"><code class="option">programs.fzf.changeDirWidgetOptions</code></a></span></dt><dd><p>Command line options for the ALT-C keybinding.
 </p><p><span class="emphasis"><em>Type:</em></span> list of strings</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         
@@ -1180,6 +1235,14 @@ for an option format description.
     "--preview 'tree -C {} | head -200'" 
     ]
   
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/fzf.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/fzf.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.fzf.defaultCommand"></a><a class="term" href="options.html#opt-programs.fzf.defaultCommand"><code class="option">programs.fzf.defaultCommand</code></a></span></dt><dd><p>The command that gets executed as the default source for fzf
+when running.
+</p><p><span class="emphasis"><em>Type:</em></span> null or string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "fd --type f"
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/fzf.nix#blob-path" target="_top">
               &lt;home-manager/modules/programs/fzf.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.fzf.defaultOptions"></a><a class="term" href="options.html#opt-programs.fzf.defaultOptions"><code class="option">programs.fzf.defaultOptions</code></a></span></dt><dd><p>Extra command line options given to fzf by default.
@@ -1197,6 +1260,14 @@ for an option format description.
   
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/fzf.nix#blob-path" target="_top">
               &lt;home-manager/modules/programs/fzf.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.fzf.fileWidgetCommand"></a><a class="term" href="options.html#opt-programs.fzf.fileWidgetCommand"><code class="option">programs.fzf.fileWidgetCommand</code></a></span></dt><dd><p>The command that gets executed as the source for fzf for the
+CTRL-T keybinding.
+</p><p><span class="emphasis"><em>Type:</em></span> null or string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        "fd --type f"
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/fzf.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/fzf.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.fzf.fileWidgetOptions"></a><a class="term" href="options.html#opt-programs.fzf.fileWidgetOptions"><code class="option">programs.fzf.fileWidgetOptions</code></a></span></dt><dd><p>Command line options for the CTRL-T keybinding.
 </p><p><span class="emphasis"><em>Type:</em></span> list of strings</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         
@@ -1210,6 +1281,12 @@ for an option format description.
     "--preview 'head {}'" 
     ]
   
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/fzf.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/fzf.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.fzf.historyWidgetCommand"></a><a class="term" href="options.html#opt-programs.fzf.historyWidgetCommand"><code class="option">programs.fzf.historyWidgetCommand</code></a></span></dt><dd><p>The command that gets executed as the source for fzf for the
+CTRL-R keybinding.
+</p><p><span class="emphasis"><em>Type:</em></span> null or string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        null
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/fzf.nix#blob-path" target="_top">
               &lt;home-manager/modules/programs/fzf.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.fzf.historyWidgetOptions"></a><a class="term" href="options.html#opt-programs.fzf.historyWidgetOptions"><code class="option">programs.fzf.historyWidgetOptions</code></a></span></dt><dd><p>Command line options for the CTRL-R keybinding.
@@ -1694,6 +1771,18 @@ command. This also includes "man" outputs of all
               &lt;home-manager/modules/programs/mercurial.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.mercurial.userName"></a><a class="term" href="options.html#opt-programs.mercurial.userName"><code class="option">programs.mercurial.userName</code></a></span></dt><dd><p>Default user name to use.</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/mercurial.nix#blob-path" target="_top">
               &lt;home-manager/modules/programs/mercurial.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.msmtp.enable"></a><a class="term" href="options.html#opt-programs.msmtp.enable"><code class="option">programs.msmtp.enable</code></a></span></dt><dd><p>Whether to enable msmtp.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/msmtp.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/msmtp.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.msmtp.extraConfig"></a><a class="term" href="options.html#opt-programs.msmtp.extraConfig"><code class="option">programs.msmtp.extraConfig</code></a></span></dt><dd><p>Extra configuration lines to add to <code class="filename">~/.msmtprc</code>.
+See <a class="link" href="https://marlam.de/msmtp/msmtprc.txt" target="_top">https://marlam.de/msmtp/msmtprc.txt</a> for examples.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        ""
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/msmtp.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/msmtp.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.neovim.enable"></a><a class="term" href="options.html#opt-programs.neovim.enable"><code class="option">programs.neovim.enable</code></a></span></dt><dd><p>Whether to enable Neovim.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         false
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
@@ -3304,6 +3393,12 @@ Use <code class="literal">any</code> to listen on all addresses.
         true
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/parcellite.nix#blob-path" target="_top">
               &lt;home-manager/modules/services/parcellite.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.pasystray.enable"></a><a class="term" href="options.html#opt-services.pasystray.enable"><code class="option">services.pasystray.enable</code></a></span></dt><dd><p>Whether to enable PulseAudio system tray.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/services/pasystray.nix#blob-path" target="_top">
+              &lt;home-manager/modules/services/pasystray.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-services.polybar.enable"></a><a class="term" href="options.html#opt-services.polybar.enable"><code class="option">services.polybar.enable</code></a></span></dt><dd><p>Whether to enable Polybar status bar.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         false
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
