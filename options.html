@@ -181,6 +181,48 @@ attribute name of the account configuration.
         true
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
               &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.offlineimap.enable"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.offlineimap.enable"><code class="option">accounts.email.accounts.&lt;name&gt;.offlineimap.enable</code></a></span></dt><dd><p>Whether to enable OfflineIMAP.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.offlineimap.extraConfig.local"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.offlineimap.extraConfig.local"><code class="option">accounts.email.accounts.&lt;name&gt;.offlineimap.extraConfig.local</code></a></span></dt><dd><p>Extra configuration options to add to the local account
+section.
+</p><p><span class="emphasis"><em>Type:</em></span> attribute set of string or signed integer or booleans</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    
+    }
+  
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        
+    {
+    sync_deletes = true; 
+    }
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.offlineimap.extraConfig.remote"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.offlineimap.extraConfig.remote"><code class="option">accounts.email.accounts.&lt;name&gt;.offlineimap.extraConfig.remote</code></a></span></dt><dd><p>Extra configuration options to add to the remote account
+section.
+</p><p><span class="emphasis"><em>Type:</em></span> attribute set of string or signed integer or booleans</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    
+    }
+  
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        
+    {
+    expunge = false; maxconnections = 2; 
+    }
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.offlineimap.postSyncHookCommand"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.offlineimap.postSyncHookCommand"><code class="option">accounts.email.accounts.&lt;name&gt;.offlineimap.postSyncHookCommand</code></a></span></dt><dd><p>Command to run after fetching new mails.</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        ""
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/accounts/email.nix#blob-path" target="_top">
+              &lt;home-manager/modules/accounts/email.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-accounts.email.accounts._name_.passwordCommand"></a><a class="term" href="options.html#opt-accounts.email.accounts._name_.passwordCommand"><code class="option">accounts.email.accounts.&lt;name&gt;.passwordCommand</code></a></span></dt><dd><p>A command, which when run writes the account password on
 standard output.
 </p><p><span class="emphasis"><em>Type:</em></span> null or string or list of strings</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
@@ -1985,6 +2027,70 @@ incorporated by <span class="command"><strong>notmuch new</strong></span>.
   
       </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/notmuch.nix#blob-path" target="_top">
               &lt;home-manager/modules/programs/notmuch.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.offlineimap.enable"></a><a class="term" href="options.html#opt-programs.offlineimap.enable"><code class="option">programs.offlineimap.enable</code></a></span></dt><dd><p>Whether to enable OfflineIMAP.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        false
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        true
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/offlineimap.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/offlineimap.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.offlineimap.extraConfig.default"></a><a class="term" href="options.html#opt-programs.offlineimap.extraConfig.default"><code class="option">programs.offlineimap.extraConfig.default</code></a></span></dt><dd><p>Extra configuration options added to the
+<code class="option">DEFAULT</code> section.
+</p><p><span class="emphasis"><em>Type:</em></span> attribute set of string or signed integer or booleans</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    
+    }
+  
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        
+    {
+    gmailtrashfolder = "[Gmail]/Papierkorb"; 
+    }
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/offlineimap.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/offlineimap.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.offlineimap.extraConfig.general"></a><a class="term" href="options.html#opt-programs.offlineimap.extraConfig.general"><code class="option">programs.offlineimap.extraConfig.general</code></a></span></dt><dd><p>Extra configuration options added to the
+<code class="option">general</code> section.
+</p><p><span class="emphasis"><em>Type:</em></span> attribute set of string or signed integer or booleans</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    
+    }
+  
+      </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
+        
+    {
+    maxage = 30; ui = "blinkenlights"; 
+    }
+  
+      </code></p><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/offlineimap.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/offlineimap.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.offlineimap.extraConfig.mbnames"></a><a class="term" href="options.html#opt-programs.offlineimap.extraConfig.mbnames"><code class="option">programs.offlineimap.extraConfig.mbnames</code></a></span></dt><dd><p>Extra configuration options added to the
+<code class="code">mbnames</code> section.
+</p><p><span class="emphasis"><em>Type:</em></span> attribute set of string or signed integer or booleans</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
+        
+    {
+    
+    }
+  
+      </code></p><p><span class="emphasis"><em>Example:</em></span> </p><pre class="programlisting">{
+  filename = "~/.config/mutt/mailboxes";
+  header = "'mailboxes '";
+  peritem = "'+%(accountname)s/%(foldername)s'";
+  sep = "' '";
+  footer = "'\\n'";
+}
+</pre><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/offlineimap.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/offlineimap.nix&gt;
+            </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.offlineimap.pythonFile"></a><a class="term" href="options.html#opt-programs.offlineimap.pythonFile"><code class="option">programs.offlineimap.pythonFile</code></a></span></dt><dd><p>Python code that can then be used in other parts of the
+configuration.
+</p><p><span class="emphasis"><em>Type:</em></span> string</p><p><span class="emphasis"><em>Default:</em></span> </p><pre class="programlisting">''
+import subprocess
+
+def get_pass(service, cmd):
+    return subprocess.check_output(cmd, )
+''</pre><p><span class="emphasis"><em>Declared by:</em></span></p><table border="0" summary="Simple list" class="simplelist"><tr><td><code class="filename"><a class="filename" href="https://github.com/rycee/home-manager/blob/master/modules/programs/offlineimap.nix#blob-path" target="_top">
+              &lt;home-manager/modules/programs/offlineimap.nix&gt;
             </a></code></td></tr></table></dd><dt><span class="term"><a id="opt-programs.pidgin.enable"></a><a class="term" href="options.html#opt-programs.pidgin.enable"><code class="option">programs.pidgin.enable</code></a></span></dt><dd><p>Whether to enable Pidgin messaging client.</p><p><span class="emphasis"><em>Type:</em></span> boolean</p><p><span class="emphasis"><em>Default:</em></span> <code class="literal">
         false
       </code></p><p><span class="emphasis"><em>Example:</em></span> <code class="literal">
